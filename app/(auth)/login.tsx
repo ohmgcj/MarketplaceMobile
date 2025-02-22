@@ -1,6 +1,6 @@
-import { Text } from "react-native";
-
+import { HStack } from "@/components/ui/hstack"
 import { VStack } from "@/components/ui/vstack"
+import { Text } from "@/components/ui/text" 
 
 export default function Index() {
   return (

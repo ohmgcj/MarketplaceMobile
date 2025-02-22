@@ -32,10 +32,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "fonts": [
+      {
+        "name": "Karla",
+        "format": "truetype",
+        "file": "./assets/fonts/Karla-Variable.ttf"
+      }
+    ]
   }
 }
