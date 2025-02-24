@@ -1,17 +1,7 @@
-import { Text } from "react-native";
-
-import { VStack } from "@/components/ui/vstack"
+import { Redirect } from "expo-router";
 
 export default function Index() {
   return (
-    <VStack
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-        <Text>Edit app/index.tsx to edit this screen.</Text>
-    </VStack>
+    <Redirect href="/(auth)/login" />
   );
 }
