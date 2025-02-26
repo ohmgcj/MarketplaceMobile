@@ -39,12 +39,10 @@ export function CustomButton({ type, onPress, children, iconName, fullWidth }: B
     };
 
 
-
-
     return (
     <TouchableOpacity
       onPress={onPress}
-      className={`flex-row items-center justify-center rounded-md p-[12px] ${buttonColor} ${fullWidth ? 'w-full' : 'auto'}`}
+      className={`flex-row items-center justify-center rounded-md p-3 ${buttonColor} ${fullWidth ? 'w-full' : 'auto'}`}
     >
       {iconName && (
         <View className="mr-2">
