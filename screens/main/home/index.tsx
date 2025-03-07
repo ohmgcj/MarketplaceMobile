@@ -53,6 +53,7 @@ export default function Home() {
     const showSubscription = Keyboard.addListener("keyboardDidShow", () => setKeyboardVisible(true));
     const hideSubscription = Keyboard.addListener("keyboardDidHide", () => setKeyboardVisible(false));
 
+    bottomSheetRef.current?.close();
     return () => {
       showSubscription.remove();
       hideSubscription.remove();
@@ -133,6 +134,7 @@ export default function Home() {
           ref={bottomSheetRef} 
           snapPoints={['50%','70%']}
           backdropComponent={renderBackdrop}
+          index={-1}
           enablePanDownToClose
           >
             <BottomSheetView className="p-6 gap-16">
