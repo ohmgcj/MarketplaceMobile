@@ -57,7 +57,7 @@ export default function Login() {;
                 <CustomInput placeholder="E-mail"/>
                 <CustomInput placeholder="Senha" type="password"/>
               </VStack>
-              <CustomButton onPress={() => { router.navigate('/') }} type="blue" fullWidth >Entrar</CustomButton>
+              <CustomButton onPress={() => { router.navigate('/(tabs)/home') }} type="blue" fullWidth >Entrar</CustomButton>
             </VStack>
           </VStack>
 

@@ -8,9 +8,10 @@ import { TextInput, TouchableOpacity, View } from 'react-native'
 interface CustomInputProps {
     placeholder?: string;
     type?: 'text' | 'password' | 'search';
+    onPress?: () => void;
 }
 
-export function CustomInput({ placeholder, type }: CustomInputProps) {
+export function CustomInput({ placeholder, type, onPress }: CustomInputProps) {
     const [isFocused, setIsFocused] = useState(false);
     const [showPassword, setShowPassword] = useState(type === 'password');
 
@@ -34,11 +35,11 @@ export function CustomInput({ placeholder, type }: CustomInputProps) {
 
             {type === 'search' && (
                 <HStack className="ml-2 items-center min-h-[24px]">
-                    <TouchableOpacity onPress={() => { }}>
+                    <TouchableOpacity onPress={() => console.log('search')}>
                         <MagnifyingGlass size={24} color="#9CA3AF" />
                     </TouchableOpacity>
                     <Divider orientation="vertical" className="mx-2 bg-gray-4 w-[1px] h-5" />
-                    <TouchableOpacity onPress={() => { }}>
+                    <TouchableOpacity onPress={onPress}>
                         <Sliders size={24} color="#9CA3AF" />
                     </TouchableOpacity>
                 </HStack>

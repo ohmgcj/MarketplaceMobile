@@ -6,8 +6,6 @@ import { SplashScreen, Tabs } from "expo-router";
 import { House, Tag, SignOut } from 'phosphor-react-native';
 
 import "@/global.css";
-import { Pressable, TouchableOpacity } from 'react-native';
-
 export default function TabLayout() {
   const [fontsLoaded] = useFonts({
     Karla: require('../../assets/fonts/Karla-VariableFont_wght.ttf'),

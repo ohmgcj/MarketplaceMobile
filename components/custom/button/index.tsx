@@ -8,10 +8,11 @@ interface ButtonProps {
     children: ReactNode;
     iconName?: 'ArrowLeft'| 'Plus'| 'Power'| 'Trash'| 'Whatsapp';
     fullWidth?: boolean;
+    className?: string
 }
 
 
-export function CustomButton({ type, onPress, children, iconName, fullWidth }: ButtonProps) {
+export function CustomButton({ type, onPress, children, iconName, fullWidth, className }: ButtonProps) {
 
     const buttonColor = 
     type === 'black' 
@@ -42,7 +43,7 @@ export function CustomButton({ type, onPress, children, iconName, fullWidth }: B
     return (
     <TouchableOpacity
       onPress={onPress}
-      className={`flex-row items-center justify-center rounded-md p-3 ${buttonColor} ${fullWidth ? 'w-full' : 'auto'}`}
+      className={`flex-row items-center justify-center rounded-md p-3 ${buttonColor} ${className} ${fullWidth ? 'w-full' : 'auto'}`}
     >
       {iconName && (
         <View className="mr-2">
