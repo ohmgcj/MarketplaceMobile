@@ -39,7 +39,8 @@ export function ProductCard({ avatar, title, price, prodImage, isDeactivated, cl
           source={prodImage}
           alt="Imagem do produto"
           size="none"
-          className="aspect-[153/100] w-full rounded-lg"
+          className="w-full h-[100px] rounded-lg"
+          resizeMode="cover"
         />
       </View>
       <View className="p-2">

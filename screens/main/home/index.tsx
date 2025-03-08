@@ -18,7 +18,7 @@ import BottomSheet, { BottomSheetBackdrop, BottomSheetView } from "@gorhom/botto
 
 import { CustomButton } from "@/components/custom/button";
 import { CustomInput } from "@/components/custom/input";
-import { ProductCard } from "@/components/custom/card"
+import { ProductCard } from "@/components/custom/productCard"
 import { Selection } from '@/components/custom/selection'
 import { TagFilter } from "@/components/custom/tagFilter"
 import Toggle from "@/components/custom/toggle";
@@ -122,6 +122,14 @@ export default function Home() {
                       title="Bicicleta"
                       price={120.00}
                       prodImage={require('../../../assets/images/tenis.png')}
+                      avatar={require('../../../assets/images/user2.jpg')}
+                    />
+                  </HStack>
+                  <HStack>
+                  <ProductCard
+                      title="Bolo"
+                      price={10.00}
+                      prodImage={require('../../../assets/images/bicicleta.png')}
                       avatar={require('../../../assets/images/user2.jpg')}
                     />
                   </HStack>
