@@ -26,13 +26,13 @@ export function Dropdown({ options, selected, onSelect }: DropdownProps) {
                 onPress={() => setIsOpen(!isOpen)}
                 className="bg-gray-7 px-3 py-2 rounded-md border border-gray-5">
                 <HStack className='gap-2'>
-                    <Text className="text-gray-1 font-karl text-md">{selected}</Text>
+                    <Text className="text-gray-1 font-karl text-md">{selected === null ? 'Selecione uma opção' : selected}</Text>
                     <CaretDown size={16} color="black" />
                 </HStack>
             </TouchableOpacity>
 
             {isOpen && (
-                <VStack className="absolute mt-2 bg-white rounded-md w-full">
+                <VStack className="absolute z-[100] mt-2 bg-white rounded-md w-full">
                     <FlatList
                         data={options}
                         renderItem={({ item }) => (
